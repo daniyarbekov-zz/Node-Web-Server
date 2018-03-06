@@ -4,6 +4,8 @@ const fs = require('fs');
 //loading handlebar
 const hbs = require('hbs');
 
+const PORT = process.env.PORT || 3000;
+
 
 var app = express();
 //using middle ware
@@ -61,6 +63,6 @@ res.render('about.hbs',{
 });
 
 //bind application to the port on our machine
-app.listen(3000, () =>{
-  console.log('server is up at server 3000');
+app.listen(PORT, () =>{
+  console.log(`server is up at server ${port}`);
 });
